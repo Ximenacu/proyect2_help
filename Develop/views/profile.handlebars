@@ -1,0 +1,206 @@
+<body>
+  <main>
+
+    <!-- ***Add a Home modal*** (toggle)-->
+    <div
+      class='modal fade'
+      id='offerHomeModal'
+      tabindex='-1'
+      role='dialog'
+      aria-labelledby='exampleModalLabel'
+      aria-hidden='true'
+    >
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+
+          <div class='modal-header'>
+            <h5 class='modal-title' id='exampleModalLabel'>Offer a Home</h5>
+            <button
+              type='button'
+              class='btn-close'
+              data-bs-dismiss='modal'
+              aria-label='Close'
+            ></button>
+          </div>
+
+          <div class='modal-body'>
+            <form class='offer-form'>
+              <!-- Location Input -->
+              <div class='form-group'>
+                <label
+                  for='signupInputUserName'
+                  style='text-align: left; margin-right:80%; margin-bottom: 2%;font-weight:500;'
+                >Location
+                </label>
+                <input
+                  type='text'
+                  class='form-control locationInput'
+                  id='signupInputUserName'
+                  aria-describedby='emailHelp'
+                  placeholder='Enter the location of your home'
+                  style='margin-bottom: 2%;'
+                />
+                {{! <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> }}
+              </div>
+
+              <!--Type OF Home Input-->
+              <div class='form-group' style='margin-bottom: 2%;'>
+                <label
+                  for='signupInputUserName'
+                  style='text-align: left; margin-right:80%; margin-bottom: 4px; font-weight:500;'
+                >Home Type
+                </label>
+
+                <div class='form-check'>
+                  <input
+                    class='form-check-input typeOfHome_A'
+                    type='radio'
+                    name='typeOfHomeRadio'
+                    id='typeOgHomeA'
+                    value='Department'
+                  />
+                  <label class='form-check-label' for='typeOfHomeA'>
+                    Department
+                  </label>
+                </div>
+
+                <div class='form-check'>
+                  <input
+                    class='form-check-input typeOfHome_B'
+                    type='radio'
+                    name='typeOfHomeRadio'
+                    id='typeOfHomeB'
+                    value='House'
+                  />
+                  <label class='form-check-label' for='typeOfHomeB'>
+                    House
+                  </label>
+                </div>
+              </div>
+
+              <!--Pet Friendly Input-->
+
+              <label
+                for='signupInputUserName'
+                style='text-align: left; margin-right:80%; margin-bottom: 4px; font-weight:500;'
+              >Pet Friendly
+              </label>
+
+              <div class='form-check form-switch'>
+                <input
+                  class='form-check-input'
+                  type='checkbox'
+                  value=''
+                  id='checkPetFriendly'
+                />
+                <label class='form-check-label' for='checkPetFriendly'>
+                  Pet Friendly
+                </label>
+              </div>
+
+              {{!-- XIMENA--}}
+              <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                  <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="mySrch">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-success" type="search" id="LocSrchBtn">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </nav>
+              {{!-- {{#if loc_search}} --}}
+                We found {{optsNum}} locations:
+                <ul class="list-group list-group-flush">
+                  {{#each place}}
+                    {{!-- <li class="list-group-item">{{loc}}</li> --}}
+                    {{> locations}}
+                  {{/each}}
+                </ul>
+              {{!-- {{/if}}               --}}
+              {{!-- XIMENA --}}
+
+
+              <button
+                type='submit'
+                id='offerSubmit'
+                class='btn btn-primary'
+                style='margin: 3%;'
+              >Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ***"profile homepage"*** -->
+    <div class='container-fluid' style='margin-bottom: 5%; margin-top:5%;'>
+      <div class='container text-center'>
+        <div class='row align-items-start'>
+          <div
+            class='col-4'
+            style='margin-left: 10%;  background-color:rgba(228, 230, 221, 0.561); padding:2%;'
+          >
+            <img
+              src='../images/profile-picture.jpeg'
+              class='img-fluid circle-image'
+              alt='homepage image'
+            />
+
+            <button
+              type='button'
+              class='btn btn-outline-white btn-dark btn-signup'
+              data-bs-toggle='modal'
+              data-bs-target='#offerHomeModal'
+              style='font-family: Poppins; border-radius: 0; margin-right: 20%'
+            >Offer a Home</button>
+          </div>
+          <div class='col-6' style='margin-top:10%'>
+            <form style='padding-left:20%'>
+              <div class='mb-3'>
+                <label
+                  for='exampleInputEmail1'
+                  class='form-label'
+                  style='margin-right:80%; font-weight:500;'
+                >User Name</label>
+                <input
+                  type='email'
+                  class='form-control'
+                  id='exampleInputEmail1'
+                  placeholder='your display name'
+                />
+              </div>
+              <div class='mb-3'>
+                <label
+                  for='exampleInputPassword1'
+                  class='form-label'
+                  style='margin-right:80%; font-weight:500;'
+                >User Email</label>
+                <input
+                  type='password'
+                  class='form-control'
+                  id='exampleInputPassword1'
+                  placeholder='your email address'
+                />
+              </div>
+
+              <div class='d-grid gap-2 d-md-block button-group'>
+                <button
+                  class='btn btn-dark'
+                  type='button'
+                  style='padding-left:1.5rem; padding-right:1.5rem;'
+                >Change Password</button>
+                <button
+                  class='btn btn-secondary'
+                  type='button'
+                  style='padding-left:1.5rem; padding-right:1.5rem;'
+                >Delete Account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>

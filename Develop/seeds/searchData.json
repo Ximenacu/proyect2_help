@@ -1,0 +1,20 @@
+[
+    {
+        "location": "Benito Juarez",
+        "typeOfHome": "apartment",
+        "pet": "Yes",
+        "user_id": 1
+    },
+    {
+        "location": "Gustavo A. Madero",
+        "typeOfHome": "apartment",
+        "pet": "No",
+        "user_id": 2
+    },
+    {
+        "location": "Cuahutemoc",
+        "typeOfHome": "apartment",
+        "pet": "Yes",
+        "user_id": 3
+    }
+]

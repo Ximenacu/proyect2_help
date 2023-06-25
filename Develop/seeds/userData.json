@@ -1,0 +1,20 @@
+[
+  {
+    "userName": "Sal",
+    "email": "sal@hotmail.com",
+    "password": "password2",
+    "userType": "search"
+  },
+  {
+    "userName": "Lernantino",
+    "email": "lernantino@gmail.com",
+    "password": "password1",
+    "userType": "search"
+  },
+  {
+    "userName": "Amiko",
+    "email": "amiko2k20@aol.com",
+    "password": "password3",
+    "userType": "offer"
+  }
+]
